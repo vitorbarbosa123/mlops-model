@@ -22,7 +22,7 @@ def home():
 @basic_auth.required
 def sentimento(frase):
     tb = TextBlob(frase)
-    tb_en = tb.translate(to='en')
+    tb_en = tb.translate(from_lang='pt', to='en')
     polaridade = tb_en.sentiment.polarity
     return "polaridade: {}".format(polaridade)
 
@@ -34,5 +34,4 @@ def cotacao():
     preco = modelo.predict([dados_input])
     return jsonify(preco=preco[0])
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+app.run(debug=True, host='0.0.0.0')

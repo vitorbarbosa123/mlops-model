@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM python:3.10-slim
 
 ARG BASIC_AUTH_USERNAME_ARG
 ARG BASIC_AUTH_PASSWORD_ARG
@@ -10,7 +10,7 @@ COPY ./requirements.txt /usr/requirements.txt
 
 WORKDIR /usr
 
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
 COPY ./src /usr/src
 COPY ./models /usr/models
