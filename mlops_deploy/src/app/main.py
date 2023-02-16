@@ -6,7 +6,7 @@ import pickle
 import os
 
 colunas = ['tamanho','ano','garagem']
-modelo = pickle.load(open('models/modelo.sav','rb'))
+modelo = pickle.load(open('../../models/modelo.sav','rb'))
 
 app = Flask(__name__)
 app.config['BASIC_AUTH_USERNAME'] = os.environ.get('BASIC_AUTH_USERNAME')
@@ -22,7 +22,7 @@ def home():
 @basic_auth.required
 def sentimento(frase):
     tb = TextBlob(frase)
-    tb_en = tb.translate(to='en')
+    tb_en = tb.translate(from_lang='pt', to='en')
     polaridade = tb_en.sentiment.polarity
     return "polaridade: {}".format(polaridade)
 
