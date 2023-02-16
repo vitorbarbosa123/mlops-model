@@ -1,9 +1,7 @@
-mlops deploy
-==============================
+## Mlops
+Project with the objective of studying MLops
 
-A short description of the project.
-
-Project Organization
+#### Project Organization, using [Cookiecutter](https://drivendata.github.io/cookiecutter-data-science/)
 ------------
 
     ├── LICENSE
@@ -53,5 +51,3 @@ Project Organization
 
 
 --------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
